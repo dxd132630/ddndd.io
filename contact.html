@@ -24,7 +24,7 @@
       <nav>
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
-            <li class="selected"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="examples.html">Examples</a></li>
             <li><a href="page.html">A Page</a></li>
             <li><a href="another_page.html">Another Page</a></li>
@@ -45,7 +45,7 @@
                 <li><a href="#">Drop Down Five</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li class="selected"><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </nav>
@@ -69,18 +69,16 @@
         </div>
       </div>
       <div id="content">
-        <h1>Welcome to the CSS3_four template</h1>
-        <p>This simple, fixed width website template is released under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>. This means you are free to download and use it for personal and commercial projects. However, you <strong>must leave the 'design from css3templates.co.uk' link in the footer of the template</strong>.</p>
-        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS3</strong>. You can view more free CSS3 web templates <a href="http://www.css3templates.co.uk">here</a>. This template is a fully documented 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design. There is also a working PHP contact form on the contact page.</p>
-        <h2>Browser Compatibility</h2>
-        <p>This template has been tested in the following browsers:</p>
-        <ul>
-          <li>Internet Explorer 8</li>
-          <li>Internet Explorer 7</li>
-          <li>FireFox 10</li>
-          <li>Google Chrome 17</li>
-          <li>Safari 4</li>
-        </ul>
+        <h1>Contact Us</h1>
+        <p>Say hello, using this contact form. There is a version of this template with a working PHP contact form, available for download from <a href="http://www.css3templates.co.uk">www.css3templates.co.uk</a>.</p>
+        <form id="contact" action="contact.html" method="post">
+          <div class="form_settings">
+            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
+            <p><span>Message</span><textarea class="contact textarea" rows="5" cols="50" name="your_message"></textarea></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="send" /></p>
+          </div>
+        </form>
       </div>
     </div>
     <div id="scroll">
