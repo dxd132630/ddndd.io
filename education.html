@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <title>Deepti Deshpande</title>
   <meta name="description" content="website description" />
@@ -8,12 +9,34 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
-</head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["timeline"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
 
+        dataTable.addColumn({ type: 'string', id: 'Term' });
+	dataTable.addColumn({ type: 'string', id: 'Activity' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ '1', 'Bachelor\'s Engineering, DSCE',new Date(2008, 8, 04), new Date(2012, 6, 15) ],
+          [ '2', 'Software Engineer, Tesco HSC',new Date(2012, 7, 09), new Date(2013, 12, 16) ],
+	  [ '3', 'Master\'s in Computer Science, UTD',new Date(2014, 01, 04), new Date(2015, 12, 24)],
+	  [ '4', 'Operational research and forecast Intern, Southwest Airlines',new Date(2015, 01, 26), new Date(2015, 05, 06)],
+	  [ '5', 'Big Fast Data Intern, @WalmartLabs',new Date(2015, 06, 03), new Date(2015, 08, 21)]]);
+
+        chart.draw(dataTable);
+      }
+    </script>
+</head>
 <body>
   <div id="main">
-    <header>
-      <div id="logo">
+     <header>
+       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><span class="logo_colour">Deepti Deshpande</span></h1>
@@ -49,7 +72,7 @@
         </div>
       </nav>
     </header>
-    <div id="site_content">
+     <div id="site_content">
       <div id="sidebar_container">
 	<div class="sidebar">
           <h3>Recent Update</h3>
@@ -68,27 +91,7 @@
           <p>I'm glad you came by. I would love to hear from you! <a href="contact.html">contact</a>.</p>
         </div>
       </div>
-      <div id="content">
-        <h1>Contact Me</h1>
-       	<p>Are you a recruiter looking for an innovator? A wanderer passing by? A student interested in my projects ? Please do not hesitate to get in <a href="mailto:bdeepthi.d@gmail.com">contact</a> with me.</p>
-	<h1> Connect with me: <h1>
-	<a href="mailto:bdeepthi.d@gmail.com"><img src="images/mail.jpg" height="42" width="42"></a>
-	<a href="https://www.linkedin.com/pub/deepti-deshpande/2b/375/295"><img src="images/linked.jpg" height="42" width="42"></a>
-	<a href="https://github.com/dxd132630"><img src="images/git.jpg" height="42" width="42"></a>
-	</br>
-	</br>
-	</br>
-	Profile Views :</br>
-	<!-- hitwebcounter Code START -->
-	<a href="http://www.hitwebcounter.com" target="_blank">
-	<img src="http://hitwebcounter.com/counter/counter.php?page=6162422&style=0005&nbdigits=5&type=page&initCount=521" title="my widget for counting" Alt="my widget for counting"border="0" >
-	</a>
-        <!-- hitwebcounter.com -->
-	<a href="http://www.hitwebcounter.com" title="MyVisits Counter" 
-        target="_blank" style="font-family: Arial, Helvetica, sans-serif; 
-        font-size: 11px; color: #9C9E94; text-decoration: none ;"> </br>
-        </a>  
-      </div>
+	<div id="timeline" style="height: 480px;width: 600px"></div>
     </div>
     <div id="scroll">
       <a title="Scroll to the top" class="top" href="#"><img src="images/top.png" alt="top" /></a>
@@ -99,7 +102,7 @@
     </footer>
   </div>
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.js" ></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
   <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
   <script type="text/javascript">
