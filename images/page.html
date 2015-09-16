@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
   <title>Deepti Deshpande</title>
   <meta name="description" content="website description" />
@@ -9,31 +8,11 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["timeline"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var container = document.getElementById('timeline');
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
-
-        dataTable.addColumn({ type: 'string', id: 'Term' });
-	dataTable.addColumn({ type: 'string', id: 'Activity' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
-        dataTable.addRows([
-          [ '1', 'Bachelor\'s Engineering, DSCE',new Date(2008, 8, 04), new Date(2012, 6, 15) ],
-	  [ '2', 'Master\'s in Computer Science, UTD',new Date(2014, 01, 04), new Date(2015, 12, 24)]]);
-
-        chart.draw(dataTable);
-      }
-    </script>
 </head>
 <body>
   <div id="main">
-     <header>
-       <div id="logo">
+    <header>
+      <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><span class="logo_colour">Deepti Deshpande</span></h1>
@@ -88,7 +67,8 @@
           <p>I'm glad you came by. I would love to hear from you! <a href="contact.html">contact</a>.</p>
         </div>
       </div>
-	<div id="timeline" style="height: 480px;width: 600px"></div>
+      <div id="content">
+      </div>
     </div>
     <div id="scroll">
       <a title="Scroll to the top" class="top" href="#"><img src="images/top.png" alt="top" /></a>
