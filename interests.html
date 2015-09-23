@@ -17,7 +17,7 @@
     function drawSeriesChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['ID', 'Experience(Yrs)', 'Proffiency', 'Technical Skill','Correlation ratio'],
+        ['ID', 'Experience(Yrs)', 'Proficiency', 'Technical Skill','Correlation ratio'],
         ['Java',2.5,4,'Language / Scripting',459.9],
 	['Bash Scripting',3.5,4,'Language / Scripting',465.9],
         ['CUDA & JCUDA',0.5,3,'Language / Scripting',244.64],
@@ -36,9 +36,9 @@
       ]);
 
       var options = {
-        title: 'Correlation between skill-set, proffiency,experience and correlation ratio',
+        title: 'Correlation between skill-set, proficiency,experience and correlation ratio',
         hAxis: {title: 'Experience(Yrs)'},
-        vAxis: {title: 'Proffiency on Scale of 5'},
+        vAxis: {title: 'Proficiency on Scale of 5'},
         bubble: {textStyle: {fontSize: 11}}
       };
 
