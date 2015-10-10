@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
   <title>Deepti Deshpande</title>
   <meta name="description" content="website description" />
@@ -9,32 +8,12 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["timeline"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var container = document.getElementById('timeline');
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
-
-        dataTable.addColumn({ type: 'string', id: 'Term' });
-	dataTable.addColumn({ type: 'string', id: 'Activity' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
-        dataTable.addRows([
-          [ '1', 'Software Engineer, Tesco HSC',new Date(2012, 7, 09), new Date(2013, 12, 16) ],
-	  [ '2', 'Operational research and forecast Intern, Southwest Airlines',new Date(2015, 01, 26), new Date(2015, 05, 06)],
-	  [ '3','Big Fast Data Intern, @WalmartLabs',new Date(2015, 06, 03), new Date(2015, 08, 21)]]);
-
-        chart.draw(dataTable);
-      }
-    </script>
 </head>
+
 <body>
   <div id="main">
-     <header>
-       <div id="logo">
+    <header>
+      <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><span class="logo_colour">Deepti Deshpande</span></h1>
@@ -70,18 +49,18 @@
         </div>
       </nav>
     </header>
-     <div id="site_content">
+    <div id="site_content">
       <div id="sidebar_container">
 	<div class="sidebar">
           <h3>Recent Update</h3>
           <h4>Actively seeking for Full-time positions</h4>
-          <h5>Jun 2015 to Aug 2015</h5>
+          <h5>Availability: Dec 2015</h5>
           <p>Interests: Hadoop / Big data/ Machine Learning/ Software development</p>
         </div>
 	<div class="sidebar">
           <h3>Past Update</h3>
           <h4>Big fast data intern @WalmartLabs</h4>
-          <h5>Jun '15 to Aug '15</h5>
+          <h5>Jun 2015 to Aug 2015</h5>
           <p>Development of performance benchmark suites for BFD hadoop clusters.</p>
         </div>
         <div class="sidebar">
@@ -89,7 +68,11 @@
           <p>I'm glad you came by. I would love to hear from you! <a href="contact.html">contact</a>.</p>
         </div>
       </div>
-	<div id="timeline" style="height: 480px;width: 600px"></div>
+      <div id="content">
+        <h1>Knitting the threads of time</h1>
+       	<p> My very first attempt to explain the implementation of multi-thread programming in Java. Conceptual details are minimal as I aim to give details on the implementation. Today I will be talking about how we can use atomic variable classes in Java to development a highly scalable nonblocking algorithms.
+	</p>
+      </div>
     </div>
     <div id="scroll">
       <a title="Scroll to the top" class="top" href="#"><img src="images/top.png" alt="top" /></a>
@@ -100,7 +83,7 @@
     </footer>
   </div>
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.js" ></script>
   <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
   <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
   <script type="text/javascript">
