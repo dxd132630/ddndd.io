@@ -47,12 +47,13 @@ Space complexity worst case:  O(n)
 
 **Big O complexities** :
 Space complexity worst case:  O(n)
-Average|Worst case 
-----|----
-Access : O(n) |Access : O(n)
-Search : O(n) |Search : O(n)
-Insert : O(1) |Insert : O(1)
-Delete : O(1) |Delete : O(1)
+
+|Average|Worst case |
+|----|----|
+|Access : O(n) |Access : O(n)|
+|Search : O(n) |Search : O(n)|
+|Insert : O(1) |Insert : O(1)|
+|Delete : O(1) |Delete : O(1)|
 
 2. **Stacks**
 3. **Queue**
@@ -61,23 +62,25 @@ Delete : O(1) |Delete : O(1)
 
 **Big O complexities** :
 Space complexity worst case:  O(n)
-Average|Worst case 
-----|----
-Access : O(n) |Access : O(n)
-Search : O(n) |Search : O(n)
-Insert : O(1) |Insert : O(1)
-Delete : O(1) |Delete : O(1)
+
+|Average|Worst case |
+|----|----|
+|Access : O(n) |Access : O(n)|
+|Search : O(n) |Search : O(n)|
+|Insert : O(1) |Insert : O(1)|
+|Delete : O(1) |Delete : O(1)|
 
 5. **Skip lists**
 6. **Hash tables/ Hash Maps** :Storing the key value pair such that each value is mapped to the key (hash of the value). Data is unordered. Hash map ensures constant time for insertion and lookups. But it comes with a cost if more than one value is hashed to  the same value. This is called Hash-collision.This is accomodated by having very large hash tables. Important applications of this is in database indexing.
 
 **Big O complexities** :
 Space complexity worst case:  O(n)
-Average|Worst case 
-----|----
-Search : O(1) |Search : O(n)
-Insert : O(1) |Insert : O(n)
-Delete : O(1) |Delete : O(n)
+
+|Average|Worst case |
+|----|----|
+|Search : O(1) |Search : O(n)|
+|Insert : O(1) |Insert : O(n)|
+|Delete : O(1) |Delete : O(n)|
 
 7. **Trees**
     * **Binary trees** : Each node of this data structure has 2 nodes
