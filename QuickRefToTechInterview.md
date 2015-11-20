@@ -34,12 +34,13 @@ Multi-dimensional arrays have more than one indices to collectively reference th
 
 **Big O complexities** :
 Space complexity worst case:  O(n)
-Average|Worst case 
-----|----
-Access : O(1) |Access : O(1)
-Search : O(n) |Search : O(n)
-Insert : O(n) |Insert : O(n)
-Delete : O(n) |Delete : O(n)
+
+|Average|Worst case |
+|----|----|
+|Access : O(1) |Access : O(1)|
+|Search : O(n) |Search : O(n)|
+|Insert : O(n) |Insert : O(n)|
+|Delete : O(n) |Delete : O(n)|
 
 ##### Abstract data types :
 1. **Singly Linked lists** : Data is stored in a object called "node" and each data object also holds a reference to its next data object. In a linked list, the first node is called the head and the last node is called the tail.They have constant insertion and deletion time. They can continue to expand.
