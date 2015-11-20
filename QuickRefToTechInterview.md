@@ -55,8 +55,33 @@ Space complexity worst case:  O(n)
 |Insert : O(1) |Insert : O(1)|
 |Delete : O(1) |Delete : O(1)|
 
-2. **Stacks**
-3. **Queue**
+2. **Stacks** : It reminds me of stack of plates in my kitchen cabinet. The one you put on top is the very first one you can access. Its LIFO :Last in first out. If you want to access you favorite plate you have to move throught each plate from top until you reach your plate. If its at the bottom then you will access all the n-1 plates until you reach your favourite plate i.e, it has O(n) search /access time. Inserts and deletes are O(1) as they are operated on top of the stack.
+Utility operations on Stacks : push() : adds an item, pop() : removes and returns the top item, peek() : returns the item on the top of the stack, without removing it and is_empty() : returns True if the stack is empty, False otherwise.
+
+
+**Big O complexities** :
+Space complexity worst case:  O(n)
+
+|Average|Worst case |
+|----|----|
+|Access : O(n) |Access : O(n)|
+|Search : O(n) |Search : O(n)|
+|Insert : O(1) |Insert : O(1)|
+|Delete : O(1) |Delete : O(1)|
+
+3. **Queue** : Remember the queue in Starbucks the customer standing first in the line gets served first. Its FIFO : first in first out. Enqueue is to add elements to the end of the queue and dequeue is to remove the elements from the start of the queue. Other utility menthods are peek() :returns the item at the front of the queue, without removing it, is_empty() : returns True if the queue is empty, False otherwise.
+
+
+**Big O complexities** :
+Space complexity worst case:  O(n)
+
+|Average|Worst case |
+|----|----|
+|Access : O(n) |Access : O(n)|
+|Search : O(n) |Search : O(n)|
+|Insert : O(1) |Insert : O(1)|
+|Delete : O(1) |Delete : O(1)|
+
 4. **Doubly Linked lists** : Doubly linked list has pointers to the next and the previous nodes. Doubly linked lists allow backward traversal of the list as compared to singly linked list which fails if you just had a pointer to a node in the middle of a list, then there would be no way to know what its previous node was. 
 
 
