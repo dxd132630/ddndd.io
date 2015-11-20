@@ -57,6 +57,7 @@ Delete : O(1) |Delete : O(1)
 3. **Queue**
 4. **Doubly Linked lists** : Doubly linked list has pointers to the next and the previous nodes. Doubly linked lists allow backward traversal of the list as compared to singly linked list which fails if you just had a pointer to a node in the middle of a list, then there would be no way to know what its previous node was. 
 
+
 **Big O complexities** :
 Space complexity worst case:  O(n)
 Average|Worst case 
