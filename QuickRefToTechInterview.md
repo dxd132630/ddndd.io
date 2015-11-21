@@ -141,6 +141,7 @@ Space complexity worst case:  O(n)
 |Insert : O(log(n)) |Insert : O(n)|
 |Delete : O(log(n)) |Delete : O(n)|
 
+
         * **AVL** : 
         * **Red-black**
     * **B-Trees**
