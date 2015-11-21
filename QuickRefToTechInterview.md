@@ -145,7 +145,7 @@ Space complexity worst case:  O(n)
 
 
 *
-   * **AVL** :AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
+      * **AVL** :AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
 
 
  **Big O complexities** :
