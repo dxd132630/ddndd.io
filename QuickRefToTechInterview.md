@@ -120,6 +120,7 @@ Space complexity worst case:  O(n)
 |Delete : O(1) |Delete : O(n)|
 
 7. **Trees** : A tree is a widely used abstract data type (ADT) or data structure implementing this ADT that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
+
     * **Binary trees** : A binary tree is a tree where every node has two or fewer children. The children are usually called left and right.The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (minus 1). In other words, half of our nodes are on the last level.If we have O(n) nodes, we have a height of O(log 2(n)).
         * **Binary search trees** : It is binary tree with following invariants: 
             1. The data stored at each node has a distinguished key which is unique in the tree and belongs to a total order. (That is, for any two non-equal keys, x,y either x < y or y < x.)
@@ -143,7 +144,8 @@ Space complexity worst case:  O(n)
 |Delete : O(log(n)) |Delete : O(n)|
 
 
-        * **AVL** :AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
+*
+   * **AVL** :AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
 
 
  **Big O complexities** :
