@@ -121,15 +121,28 @@ Space complexity worst case:  O(n)
 
 7. **Trees** : A tree is a widely used abstract data type (ADT) or data structure implementing this ADT that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
     * **Binary trees** : A binary tree is a tree where every node has two or fewer children. The children are usually called left and right.The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (minus 1). In other words, half of our nodes are on the last level.If we have O(n) nodes, we have a height of O(log 2(n)).
+    * 
+   **Big O complexities** :
+Space complexity worst case:  O(n)
+
+|Average|Worst case |
+|----|----|
+|Access : O(log(n)) |Access : O(n)|
+|Search : O(log(n)) |Search : O(n)|
+|Insert : O(log(n)) |Insert : O(n)|
+|Delete : O(log(n)) |Delete : O(n)|
+
+    * 
+    * 
         * **Binary search trees** : It is binary tree with following invariants: 
-         * The data stored at each node has a distinguished key which is unique in the tree and belongs to a total order. (That is, for any two non-equal keys, x,y either x < y or y < x.)
-         * The key of any node is greater than all keys occurring in its left subtree and less than all keys occurring in its right subtree.
-         * Inserts are simple, insert the nodes to maintain the invariants.
-         * But delete operations in BST are of two types : Simple delete and complex delete.
-         * Simple delete :
-            * Deleting a leaf --- simply remove it
-            * Deleting a node with one child --- remove it and move its child (the subtree rooted at its child) up
-            * Deleting a node with two children --- swap with the smallest keyed-child in its right subtree, then remove or swap with the largest keyed-child in its left subtree, then remove
+            1. The data stored at each node has a distinguished key which is unique in the tree and belongs to a total order. (That is, for any two non-equal keys, x,y either x < y or y < x.)
+            2. The key of any node is greater than all keys occurring in its left subtree and less than all keys occurring in its right subtree.
+            3. Inserts are simple, insert the nodes to maintain the invariants.
+            4. But delete operations in BST are of two types : Simple delete and complex delete.
+            5. Simple delete :
+            6. Deleting a leaf --- simply remove it
+            7. Deleting a node with one child --- remove it and move its child (the subtree rooted at its child) up
+            8. Deleting a node with two children --- swap with the smallest keyed-child in its right subtree, then remove or swap with the largest keyed-child in its left subtree, then remove
         * **AVL** : 
         * **Red-black**
     * **B-Trees**
