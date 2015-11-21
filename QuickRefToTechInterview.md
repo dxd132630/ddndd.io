@@ -130,7 +130,8 @@ Space complexity worst case:  O(n)
             6. Deleting a leaf --- simply remove it
             7. Deleting a node with one child --- remove it and move its child (the subtree rooted at its child) up
             8. Deleting a node with two children --- swap with the smallest keyed-child in its right subtree, then remove or swap with the largest keyed-child in its left subtree, then remove
-               
+
+ 
    **Big O complexities** :
 Space complexity worst case:  O(n)
 
@@ -142,7 +143,20 @@ Space complexity worst case:  O(n)
 |Delete : O(log(n)) |Delete : O(n)|
 
 
-        * **AVL** : 
+        * **AVL** : AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
+
+
+ **Big O complexities** :
+Space complexity worst case:  O(n)
+
+|Average|Worst case |
+|----|----|
+|Access : O(log(n)) |Access : O(log(n))|
+|Search : O(log(n)) |Search : O(log(n))|
+|Insert : O(log(n)) |Insert : O(log(n))|
+|Delete : O(log(n)) |Delete : O(log(n))|
+
+
         * **Red-black**
     * **B-Trees**
         * **B+Trees**
