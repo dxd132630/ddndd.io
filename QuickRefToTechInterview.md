@@ -95,7 +95,19 @@ Space complexity worst case:  O(n)
 |Insert : O(1) |Insert : O(1)|
 |Delete : O(1) |Delete : O(1)|
 
-5. **Skip lists**
+5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an “express lane” which connects only main outer stations, and the lower layer works as a “normal lane” which connects every station. 
+
+**Big O complexities** :
+Space complexity worst case:  O(n log(n))
+
+|Average|Worst case |
+|----|----|
+|Access : O(log(n)) |Access : O(n)|
+|Search : O(log(n)) |Search : O(n)|
+|Insert : O(log(n)) |Insert : O(n)|
+|Delete : O(log(n)) |Delete : O(n)|
+
+
 6. **Hash tables/ Hash Maps** :Storing the key value pair such that each value is mapped to the key (hash of the value). Data is unordered. Hash map ensures constant time for insertion and lookups. But it comes with a cost if more than one value is hashed to  the same value. This is called Hash-collision.This is accomodated by having very large hash tables. Important applications of this is in database indexing.
 
 **Big O complexities** :
@@ -107,7 +119,7 @@ Space complexity worst case:  O(n)
 |Insert : O(1) |Insert : O(n)|
 |Delete : O(1) |Delete : O(n)|
 
-7. **Trees**
+7. **Trees** : A tree is a widely used abstract data type (ADT) or data structure implementing this ADT that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
     * **Binary trees** : Each node of this data structure has 2 nodes
         * **AVL**
         * **Red-black**
