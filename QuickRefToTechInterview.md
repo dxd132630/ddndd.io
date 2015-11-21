@@ -169,8 +169,28 @@ Space complexity worst case:  O(n)
 
 
     * **B-Trees**
-        * **B+Trees**
-        * **B\* Trees**
+         **Big O complexities** :
+            Space complexity worst case:  O(n)
+            
+            |Average|Worst case |
+            |----|----|
+            |Access : O(log(n)) |Access : O(log(n))|
+            |Search : O(log(n)) |Search : O(log(n))|
+            |Insert : O(log(n)) |Insert : O(log(n))|
+            |Delete : O(log(n)) |Delete : O(log(n))|
+
+
+        * **B+Trees** :  A B+tree is a balanced tree in which every path from the root of the tree to a leaf is of the same length, and each nonleaf node of the tree has between [n/2] and [n] children, where n is fixed for a particular tree. It contains index pages and data pages. The capacity of a leaf has to be 50% or more. For example: if n = 4, then the key for each node is between 2 to 4. The index page will be 4 + 1 = 5.It is easy to maintain the tree balanced. Inserts in B+ trees:
+         * do a search to determine what bucket the new record should go in if the bucket is not full, add the record.
+         * otherwise, split the bucket.
+         * allocate new leaf and move half the bucket's elements to the new bucket
+         * insert the new leaf's smallest key and address into the parent.
+         * if the parent is full, split it also
+         * now add the middle key to the parent node
+         * repeat until a parent is found that need not split
+         * if the root splits, create a new root which has one key and two pointers.
+         
+        * **B\* Trees** : 
         * **2-3 trees**
         * **2-3-4 trees**
     * **Heaps** : 
