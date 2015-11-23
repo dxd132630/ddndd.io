@@ -200,3 +200,28 @@ Space complexity worst case:  O(n)
         * **Trie**
         * **Radix**
 8. **Graphs**
+
+### Sorting Algorithms:
+
+#### Objective :
+The objective is to rearrange the items such that their keys are in ascending order.
+The sorting algorithms we consider divide into two basic types: those that sort in place (no extra memory except perhaps for a small function-call stack or a constant number of instance variables), and those that need enough extra memory to hold another copy of the array to be sorted.
+There are two kinds of sorting of numbers :
+   * Comparison sorting : The most common and prevalent sorting mechanism
+   * Integer sorting : Less known sorting approach for numbers
+
+Comparison sorting : The idea used for sorting the numbers here is by having a comparision of the order of these numbers in the sequence and reassigning the numbers to the correct order based on this comparison. This generally has a lower bound of Sigma(nlogn). Although some sorting algorithms have O(n) only when they are sorted. In worst case the lower bound is nLogn.
+
+
+1. **Selection sort** :
+2. **Insertion sort** :
+3. **Shell sort** :
+4. **Bubble sort** :
+5. **Merge sort** :
+6. **Quick sort** :
+7. **Heap sort** :
+
+Integer sorting :  is the algorithmic problem of sorting a collection of data values by numeric keys, each of which is an integer. Algorithms designed for integer sorting may also often be applied to sorting problems in which the keys are floating point numbers or text strings.
+1. **Bucket sort** :
+2. **Count sort** :
+3. **Radix sort** :
