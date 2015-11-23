@@ -377,7 +377,17 @@ The objective is to seek the required element in the given data set.
    |Average : O(n/2) |Average : O(n) |
    |Worst : O(n) |Worst : O(n) |
 
-2. **Binary search** :
-3. **Hashing** :
+   Time complexity of Ordered list
+  
+   |Item present|Item not present|
+   |----|----|
+   |Best : O(1) |Best : O(1) |
+   |Average : O(n/2) |Average : O(n/2) |
+   |Worst : O(n) |Worst : O(n) |
+
+2. **Binary search** :Can we do better than sequential search? The answer is yes.The idea is based on an algorithm which is a great example of a divide and conquer strategy.Binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.We can then repeat the process with the upper half. Start at the middle item and compare it against what we are looking for. Again, we either find it or split the list in half, therefore eliminating another large part of our possible search space. 
+   Worst time complexity of an ordered list is O(log(n) +1) and Average time complexity is O(log(n))
+
+3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.
 4. **Breadth first search** :
 5. **Depth first search** :
