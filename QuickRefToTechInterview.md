@@ -213,7 +213,18 @@ There are two kinds of sorting of numbers :
 Comparison sorting : The idea used for sorting the numbers here is by having a comparision of the order of these numbers in the sequence and reassigning the numbers to the correct order based on this comparison. This generally has a lower bound of Sigma(nlogn). Although some sorting algorithms have O(n) only when they are sorted. In worst case the lower bound is nLogn.
 
 
-1. **Selection sort** :
+1. **Selection sort** :The algorithm works by selecting the smallest unsorted item and then swapping it with the item in the next position to be filled.
+The selection sort works as follows: you look through the entire array for the smallest element, once you find it you swap it (the smallest element) with the first element of the array. Then you look for the smallest element in the remaining array (an array without the first element) and swap it with the second element. Then you look for the smallest element in the remaining array (an array without first and second elements) and swap it with the third element, and so on.
+
+**Big O complexities** :
+Space complexity worst case:  O(1)
+
+|Time complexity|
+|----|
+|Best : O(n^2) |
+|Average : O(n^2) |
+|Worst : O(n^2) |
+
 2. **Insertion sort** :
 3. **Shell sort** :
 4. **Bubble sort** :
