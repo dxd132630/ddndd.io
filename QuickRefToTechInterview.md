@@ -273,8 +273,32 @@ The selection sort works as follows: you look through the entire array for the s
    |Average : O(nlog(n)) |
    |Worst : O(nlog(n)) |
 
-6. **Quick sort** :
-7. **Heap sort** :
+6. **Quick sort** : Quicksort is popular because it is not difficult to implement, works well for a variety of different kinds of input data, and is substantially faster than any other sorting method in typical applications. It is in-place (uses only a small auxiliary stack), requires time proportional to N log N on the average to sort N items, and has an extremely short inner loop. Quicksort is a divide-and-conquer method for sorting. It works by partitioning an array into two parts, then sorting the parts independently.
+The crux of the method is the partitioning process, which rearranges the array to make the following three conditions hold:
+   * The entry a[j] is in its final place in the array, for some j.
+   * No entry in a[lo] through a[j-1] is greater than a[j].
+   * No entry in a[j+1] through a[hi] is less than a[j].
+This j point is called pviot point at which the partition takes place. We achieve a complete sort by partitioning, then recursively applying the method to the subarrays. It is a randomized algorithm, because it randomly shuffles the array before sorting it.
+
+   **Big O complexities** :
+   Space complexity worst case:  O(nlog(n))
+   
+   |Time complexity|
+   |----|
+   |Best : O(nlog(n)) |
+   |Average : O(nlog(n)) |
+   |Worst : O(n^2) |
+
+7. **Heap sort** :The heap sort combines the best of both merge sort and insertion sort. Like merge sort, the worst case time of heap sort is O(n log n) and like insertion sort, heap sort sorts in-place. The heap sort algorithm starts by using procedure BUILD-HEAP to build a heap on the input array A[1 . . n]. Since the maximum element of the array stored at the root A[1], it can be put into its correct final position by exchanging it with A[n] (the last element in A). If we now discard node n from the heap than the remaining elements can be made into heap. Note that the new element at the root may violate the heap property. All that is needed to restore the heap property.The HEAPSORT procedure takes time O(n lg n), since the call to BUILD_HEAP takes time O(n) and each of the n -1 calls to Heapify takes time O(lg n).
+
+   **Big O complexities** :
+   Space complexity worst case:  O(1)
+   
+   |Time complexity|
+   |----|
+   |Best : O(nlog(n)) |
+   |Average : O(nlog(n)) |
+   |Worst : O(nlog(n)) |
 
 Integer sorting :  is the algorithmic problem of sorting a collection of data values by numeric keys, each of which is an integer. Algorithms designed for integer sorting may also often be applied to sorting problems in which the keys are floating point numbers or text strings.
 
