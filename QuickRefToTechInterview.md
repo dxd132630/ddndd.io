@@ -225,8 +225,28 @@ Space complexity worst case:  O(1)
 |Average : O(n^2) |
 |Worst : O(n^2) |
 
-2. **Insertion sort** :
-3. **Shell sort** :
+2. **Insertion sort** : The algorithm that people often use to sort bridge hands is to consider the cards one at a time, inserting each into its proper place among those already considered (keeping them sorted). In a computer implementation, we need to make space for the current item by moving larger items one position to the right, before inserting the current item into the vacated position.
+
+**Big O complexities** :
+Space complexity worst case:  O(1)
+
+|Time complexity|
+|----|
+|Best : O(n) |
+|Average : O(n^2) |
+|Worst : O(n^2) |
+
+3. **Shell sort** : Shellsort is a simple extension of insertion sort that gains speed by allowing exchanges of entries that are far apart, to produce partially sorted arrays that can be efficiently sorted, eventually by insertion sort. The idea is to rearrange the array to give it the property that taking every hth entry (starting anywhere) yields a sorted sequence. Such an array is said to be h-sorted.By h-sorting for some large values of h, we can move entries in the array long distances and thus make it easier to h-sort for smaller values of h. Using such a procedure for any increment sequence of values of h that ends in 1 will produce a sorted array: that is shellsort. Shell.java is an implementation of this method. The number of compares used by shellsort with the increments 1, 4, 13, 40, 121, 364, ... is bounded by a small multiple of N times the number of increments used, in this case it is is O(N^(3/2)).
+
+**Big O complexities** :
+Space complexity worst case:  O(n) total, O(1) auxilary
+
+|Time complexity|
+|----|
+|Best : O(nlog(n)) |
+|Average : depends on gap sequence |
+|Worst : O(n^2) |
+
 4. **Bubble sort** :
 5. **Merge sort** :
 6. **Quick sort** :
