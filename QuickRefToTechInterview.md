@@ -302,6 +302,42 @@ This j point is called pviot point at which the partition takes place. We achiev
 
 Integer sorting :  is the algorithmic problem of sorting a collection of data values by numeric keys, each of which is an integer. Algorithms designed for integer sorting may also often be applied to sorting problems in which the keys are floating point numbers or text strings.
 
-1. **Bucket sort** :
-2. **Count sort** :
-3. **Radix sort** :
+1. **Bucket sort** :Bucket sort, or bin sort, is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm.
+   Bucket sort works as follows:
+
+      * Set up an array of initially empty "buckets".
+      * Scatter: Go over the original array, putting each object in its bucket.
+      * Sort each non-empty bucket.
+      * Gather: Visit the buckets in order and put all elements back into the original array
+    **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Time complexity|
+   |----|
+   |Best : O(n+k) |
+   |Average : O(n+k) |
+   |Worst : O(n^2) |
+
+2. **Count sort** : It works by counting the number of objects that have each distinct key value, and using arithmetic on those counts to determine the positions of each key value in the output sequence. Its running time is linear in the number of items and the difference between the maximum and minimum key values, so it is only suitable for direct use in situations where the variation in keys is not significantly greater than the number of items. However, it is often used as a subroutine in another sorting algorithm, radix sort, that can handle larger keys more efficiently
+    When elements are in range from 1 to k.
+   **Big O complexities** :
+   Space complexity worst case:  O(n+k)
+   
+   |Time complexity|
+   |----|
+   |Best : O(n+k) |
+   |Average : O(n+k) |
+   |Worst : O(n^2) |
+
+3. **Radix sort** :The idea of Radix Sort is to do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.
+   Do following for each digit i where i varies from least significant digit to the most significant digit.
+      Repeat : Sort input array using counting sort (or any stable sort) according to the i’th digit.
+
+   **Big O complexities** :
+   Space complexity worst case:  O(n+k)
+   
+   |Time complexity|
+   |----|
+   |Best : O(nk) |
+   |Average : O(nk) |
+   |Worst : O(nk) |
