@@ -369,9 +369,10 @@ The objective is to seek the required element in the given data set.
       **Big O complexities** :
    Space complexity worst case:  O(1)
    
-   |Time complexity of Unordered list|
-   |----|----|
+   Time complexity of Unordered list
+  
    |Item present|Item not present|
+   |----|----|
    |Best : O(1) |Best : O(n) |
    |Average : O(n/2) |Average : O(n) |
    |Worst : O(n) |Worst : O(n) |
