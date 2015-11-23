@@ -247,8 +247,32 @@ The selection sort works as follows: you look through the entire array for the s
    |Average : depends on gap sequence |
    |Worst : O(n^2) |
 
-4. **Bubble sort** :
-5. **Merge sort** :
+4. **Bubble sort** : The algorithm works by comparing each item in the list with the item next to it, and swapping them if required. In other words, the largest element has bubbled to the top of the array. The algorithm repeats this process until it makes a pass all the way through the list without swapping any items.
+
+  **Big O complexities** :
+   Space complexity worst case:  O(1)
+   
+   |Time complexity|
+   |----|
+   |Best : O(n) |
+   |Average : O(n^2) |
+   |Worst : O(n^2) |
+
+5. **Merge sort** :Merge-sort is based on the divide-and-conquer paradigm. It involves the following three steps:
+   * Divide the array into two (or more) subarrays
+   * Sort each subarray (Conquer)
+   * Merge them into one (in a smart way!)
+   Its prime disadvantage is that it uses extra space proportional to N.The method merge(a, lo, mid, hi) and puts the results of merging the subarrays auxilary_array[lo..mid] with auxilary_array[mid+1..hi] into a single ordered array, leaving the result in a[lo..hi]. While it would be desirable to implement this method without using a significant amount of extra space, such solutions are remarkably complicated. Instead, merge() copies everything to an auxiliary array and then merges back to the original.
+
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Time complexity|
+   |----|
+   |Best : O(nlog(n)) |
+   |Average : O(nlog(n)) |
+   |Worst : O(nlog(n)) |
+
 6. **Quick sort** :
 7. **Heap sort** :
 
