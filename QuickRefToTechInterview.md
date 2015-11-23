@@ -228,6 +228,15 @@ The selection sort works as follows: you look through the entire array for the s
    |Worst : O(n^2) |
 
 2. **Insertion sort** : The algorithm that people often use to sort bridge hands is to consider the cards one at a time, inserting each into its proper place among those already considered (keeping them sorted). In a computer implementation, we need to make space for the current item by moving larger items one position to the right, before inserting the current item into the vacated position.
+Following are some of the important characteristics of Insertion Sort.
+
+      * It has one of the simplest implementation
+      * It is efficient for smaller data sets, but very inefficient for larger lists.
+      * Insertion Sort is adaptive, that means it reduces its total number of steps if given a partially sorted list, hence it increases its efficiency.
+      * It is better than Selection Sort and Bubble Sort algorithms.
+      * Its space complexity is less, like Bubble Sorting, inerstion sort also requires a single additional memory space.
+      * It is Stable, as it does not change the relative order of elements with equal keys
+
 
    **Big O complexities** :
    Space complexity worst case:  O(1)
@@ -249,7 +258,7 @@ The selection sort works as follows: you look through the entire array for the s
    |Average : depends on gap sequence |
    |Worst : O(n^2) |
 
-4. **Bubble sort** : The algorithm works by comparing each item in the list with the item next to it, and swapping them if required. In other words, the largest element has bubbled to the top of the array. The algorithm repeats this process until it makes a pass all the way through the list without swapping any items.
+4. **Bubble sort** : The algorithm works by comparing each item in the list with the item next to it, and swapping them if required. In other words, the largest element has bubbled to the top of the array. The algorithm repeats this process until it makes a pass all the way through the list without swapping any items.It is called Bubble sort, because with each iteration the smaller element in the list bubbles up towards the first place, just like a water bubble rises up to the water surface.
 
   **Big O complexities** :
    Space complexity worst case:  O(1)
@@ -265,6 +274,8 @@ The selection sort works as follows: you look through the entire array for the s
    * Sort each subarray (Conquer)
    * Merge them into one (in a smart way!)
    Its prime disadvantage is that it uses extra space proportional to N.The method merge(a, lo, mid, hi) and puts the results of merging the subarrays auxilary_array[lo..mid] with auxilary_array[mid+1..hi] into a single ordered array, leaving the result in a[lo..hi]. While it would be desirable to implement this method without using a significant amount of extra space, such solutions are remarkably complicated. Instead, merge() copies everything to an auxiliary array and then merges back to the original.
+      * It requires equal amount of additional space as the unsorted list. Hence its not at all recommended for searching large unsorted lists.
+      * It is the best Sorting technique for sorting Linked Lists.
 
    **Big O complexities** :
    Space complexity worst case:  O(n)
@@ -292,6 +303,9 @@ This j point is called pviot point at which the partition takes place. We achiev
    |Worst : O(n^2) |
 
 7. **Heap sort** :The heap sort combines the best of both merge sort and insertion sort. Like merge sort, the worst case time of heap sort is O(n log n) and like insertion sort, heap sort sorts in-place. The heap sort algorithm starts by using procedure BUILD-HEAP to build a heap on the input array A[1 . . n]. Since the maximum element of the array stored at the root A[1], it can be put into its correct final position by exchanging it with A[n] (the last element in A). If we now discard node n from the heap than the remaining elements can be made into heap. Note that the new element at the root may violate the heap property. All that is needed to restore the heap property.The HEAPSORT procedure takes time O(n lg n), since the call to BUILD_HEAP takes time O(n) and each of the n -1 calls to Heapify takes time O(lg n).
+
+      * Heap sort is not a Stable sort, and requires a constant space for sorting a list.
+      * Heap Sort is very fast and is widely used for sorting.
 
    **Big O complexities** :
    Space complexity worst case:  O(1)
@@ -345,3 +359,24 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
    |Best : O(nk) |
    |Average : O(nk) |
    |Worst : O(nk) |
+
+### Searching Algorithms:
+
+#### Objective : 
+The objective is to seek the required element in the given data set.
+
+1. **Sequential search** :Sequential search involves looking at each value in turn (i.e., start with the value in array[0], then array[1], etc). The algorithm quits and returns true if the current value is v; it quits and returns false if it has looked at all of the values in the array without finding v.If the values are in sorted order, then the algorithm can sometimes quit and return false without having to look at all of the values in the array: v is not in the array if the current value is greater than v.
+      **Big O complexities** :
+   Space complexity worst case:  O(1)
+   
+   |Time complexity of Unordered list|
+   |----|----|
+   |Item present|Item not present|
+   |Best : O(1) |Best : O(n) |
+   |Average : O(n/2) |Average : O(n) |
+   |Worst : O(n) |Worst : O(n) |
+
+2. **Binary search** :
+3. **Hashing** :
+4. **Breadth first search** :
+5. **Depth first search** :
