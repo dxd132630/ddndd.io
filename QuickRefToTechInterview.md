@@ -222,6 +222,7 @@ Comparison sorting : The idea used for sorting the numbers here is by having a c
 7. **Heap sort** :
 
 Integer sorting :  is the algorithmic problem of sorting a collection of data values by numeric keys, each of which is an integer. Algorithms designed for integer sorting may also often be applied to sorting problems in which the keys are floating point numbers or text strings.
+
 1. **Bucket sort** :
 2. **Count sort** :
 3. **Radix sort** :
