@@ -200,8 +200,6 @@ Space complexity worst case:  O(n)
          * Since a heap is a complete binary tree, it has a smallest possible height - a heap with N nodes always has O(log N) height.
          * A heap is useful data structure when you need to remove the object with the highest (or lowest) priority. A common use of a heap is to implement a priority queue.
 
-         * **B-Trees**
-    
              **Big O complexities** :
                 
             |Average |
@@ -231,8 +229,34 @@ Space complexity worst case:  O(n)
                ・It contains the binomial tree Bi iff bi = 1, where bk⋅ b2 b1 b0 is binary representation of n.
                ・It has ≤ ⎣log2 n⎦ + 1 binomial trees.
                ・Its height ≤ ⎣log2 n⎦.
-               
-        * **Fibonacci heaps**
+             **Big O complexities** :
+            
+            |Average |
+            |----|
+            |Heapify : -|
+            |FindMax : O(1) |
+            |ExtractMax: O(log(n)) |
+            |IncreaseKey: O(log(n))|
+            |Insert : O(1)|
+            |Delete : O(log(n))|
+            |Merge : O(log(n))|
+            
+            
+        * **Fibonacci heaps** :Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heap’s properties comes in.Each tree has an order just like the binomial heap that is based on the number of children. Nodes within a Fibonacci heap can be removed from their tree without restructuring them, so the order does not necessarily indicate the maximum height of the tree or number of nodes it contains.
+
+             **Big O complexities** :
+            
+            |Average |
+            |----|
+            |Heapify : -|
+            |FindMax : O(1) |
+            |ExtractMax: O(log(n)) |
+            |IncreaseKey: O(log(n))|
+            |Insert : O(1)|
+            |Delete : O(log(n))|
+            |Merge : O(log(n))|
+            
+
     * **Trees**
         * **Trie**
         * **Radix**
