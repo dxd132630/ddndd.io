@@ -199,8 +199,39 @@ Space complexity worst case:  O(n)
          * In a heap the highest (or lowest) priority element is always stored at the root, hence the name "heap". A heap is not a sorted structure and can be regarded as partially ordered. As you see from the picture, there is no particular relationship among nodes on any given level, even among the siblings.
          * Since a heap is a complete binary tree, it has a smallest possible height - a heap with N nodes always has O(log N) height.
          * A heap is useful data structure when you need to remove the object with the highest (or lowest) priority. A common use of a heap is to implement a priority queue.
-         
-        * **Binomial heaps**
+
+         * **B-Trees**
+    
+             **Big O complexities** :
+                
+            |Average |
+            |----|
+            |Heapify : O(n)|
+            |FindMax : O(1) |
+            |ExtractMax: O(log(n)) |
+            |IncreaseKey: O(log(n))|
+            |Insert : O(log(n))|
+            |Delete : O(log(n))|
+            |Merge : O(m+n)|
+
+        * **Binomial heaps** :  A binomial tree of order k is defined recursively:
+            * Order 0: single node.
+            * Order k: one binomial tree of order k – 1 linked to another of order k – 1.
+            * Given an order k binomial tree Bk,
+               ・Its height is k.
+               ・It has 2k nodes.
+               ・It has nodes at depth i.
+               ・The degree of its root is k.
+               ・Deleting its root yields k binomial trees Bk–1, …, B0
+            * A binomial heap is a sequence of binomial trees such that:
+               ・Each tree is heap-ordered.
+               ・There is either 0 or 1 binomial tree of order k.
+            * Given a binomial heap with n nodes:
+               ・The node containing the min element is a root of B0, B1, …, or Bk.
+               ・It contains the binomial tree Bi iff bi = 1, where bk⋅ b2 b1 b0 is binary representation of n.
+               ・It has ≤ ⎣log2 n⎦ + 1 binomial trees.
+               ・Its height ≤ ⎣log2 n⎦.
+               
         * **Fibonacci heaps**
     * **Trees**
         * **Trie**
