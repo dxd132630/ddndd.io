@@ -141,14 +141,14 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
                 * Simple delete : Deleting a leaf --- simply remove it.Deleting a node with one child --- remove it and move its child (the subtree rooted at its child) up.
                 * Complex delete : Deleting a node with two children --- swap with the smallest keyed-child in its right subtree, then remove or swap with the largest keyed-child in its left subtree, then remove.
 
-            **Big O complexities**: Space complexity worst case : O(n)
-                
-            |Average|Worst case |
-            |----|----|
-            |Access : O(log(n)) |Access : O(n)|
-            |Search : O(log(n)) |Search : O(n)|
-            |Insert : O(log(n)) |Insert : O(n)|
-            |Delete : O(log(n)) |Delete : O(n)|
+              **Big O complexities**: Space complexity worst case : O(n)
+                  
+              |Average|Worst case |
+              |----|----|
+              |Access : O(log(n)) |Access : O(n)|
+              |Search : O(log(n)) |Search : O(n)|
+              |Insert : O(log(n)) |Insert : O(n)|
+              |Delete : O(log(n)) |Delete : O(n)|
                 
         * **AVL** :AVL tree is a self-balancing Binary Search Tree (BST) with the invariant that the difference between heights of left and right subtrees cannot be more than one.The worst case complexity for skewed BST is O(n) to avoid this time complexity and to guarantee an upper bound of O(log n) for insert, search and delete operations. 
         
@@ -181,15 +181,15 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
 
     * **B-Trees**
          
-             **Big O complexities** :
-            Space complexity worst case:  O(n)
-                
-            |Average|Worst case |
-            |----|----|
-            |Access : O(log(n)) |Access : O(log(n))|
-            |Search : O(log(n)) |Search : O(log(n))|
-            |Insert : O(log(n)) |Insert : O(log(n))|
-            |Delete : O(log(n)) |Delete : O(log(n))|
+         **Big O complexities** :
+        Space complexity worst case:  O(n)
+            
+        |Average|Worst case |
+        |----|----|
+        |Access : O(log(n)) |Access : O(log(n))|
+        |Search : O(log(n)) |Search : O(log(n))|
+        |Insert : O(log(n)) |Insert : O(log(n))|
+        |Delete : O(log(n)) |Delete : O(log(n))|
 
         * **B+Trees** :  A B+tree is a balanced tree in which every path from the root of the tree to a leaf is of the same length, and each nonleaf node of the tree has between [n/2] and [n] children, where n is fixed for a particular tree. It contains index pages and data pages. The capacity of a leaf has to be 50% or more. For example: if n = 4, then the key for each node is between 2 to 4. The index page will be 4 + 1 = 5.It is easy to maintain the tree balanced. Inserts in B+ trees:
          * do a search to determine what bucket the new record should go in if the bucket is not full, add the record.
