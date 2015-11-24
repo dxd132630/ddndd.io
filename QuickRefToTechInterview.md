@@ -11,7 +11,7 @@ Generally the time complexities of the algorithms are expressed with following n
 
 ### Asymptotic analysis :
 
-In computational theory asymptote is used to represent the limiting behavior to describe the computational complexity of problems, generally in Big O notation. For rest of the discussion we will be using Big O notation to represent.
+In computational theory asymptote is used to represent the limiting behavior to describe the computational complexity of problems, generally in Big O notation. For rest of the discussion we will be using Big O notation to represent theoritical time and space complexities.
 
 ### Data structures :
 
