@@ -388,6 +388,37 @@ The objective is to seek the required element in the given data set.
 2. **Binary search** :Can we do better than sequential search? The answer is yes.The idea is based on an algorithm which is a great example of a divide and conquer strategy.Binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.We can then repeat the process with the upper half. Start at the middle item and compare it against what we are looking for. Again, we either find it or split the list in half, therefore eliminating another large part of our possible search space. 
    Worst time complexity of an ordered list is O(log(n) +1) and Average time complexity is O(log(n))
 
-3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.
-4. **Breadth first search** :
-5. **Depth first search** :
+3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot.The mapping between an item and the slot where that item belongs in the hash table is called the hash function. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. The occupancy of values in slots is defined by load factor, and is commonly denoted by λ=number of items /tablesize. Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. According to the hash function, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a “clash”).Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. 
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Search : O(1) |Search : O(n)|
+
+4. **Breadth first search** : An algorithm that searches a tree(or graph) by searching levels of the tree first, starting from the root. 
+   * If there are more than one node at the same level then it recursively searches from left to right.
+   * While doing this it tracks the children nodes of the nodes on the current level.
+   * When finished examining a level it moves to the left most node on the next level.
+   * The bottom-right most node is evaluated last( the node that is deepest and is farthest right of its level)
+
+This kind of searching is optimal for a tree that is deep. The algorithm uses queue to store information about the tree while it traverses. Queues are more memory intensive, so depth first search is also memory intensive. 
+
+Time complexity : O(|E| +|V|)
+
+5. **Depth first search** : An algorithm that searches a tree by searching depth of the tree first, starting at the root.
+   * It traverses left down a tree until it cannot go further.
+   * Once it reaches the end of a branch it traverses back up by trying the right child of nodes on that branch, and if possible left from the right children.
+   * When finished examining a branch it moves to the node right of the root then tries to go left on all it's children until it reaches the bottom.
+   * The right most node is evaluated last(the node that is ight of all it's ancestors).
+
+This kind of searching is optimal for tree that are shallow and wide. Uses stacks to push nodes onto and as Stacks are LIFO it does not need to keep track if the node pointers and is therefore less memory intensive than BFS. Once it cannot go further left it begins to evaluate the stack.
+
+Time complexity : O(|E| +|V|)
+
+Note :
+1. For wide, shallow trees use BFS
+2. For deep, narrow trees use DFS
+3. BFS tends to be looping algorithm
+4. DFS tends to be recursive alrorithm
+
