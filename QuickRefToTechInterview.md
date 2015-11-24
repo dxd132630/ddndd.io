@@ -27,6 +27,7 @@ The data can be organized in various ways depending on the requirements like eas
 - **Merging**:Combining elements of two similar data structures to form a new data structure of the same type, is called merging.
 
 ##### Composite data structures: 
+
 1. **Arrays** : 
 An array is a low-level data structure that holds an ordered collection of elements. Each position in the array has an index, starting with 0. [ Wondering why indexing starts at 0 ?]. Optimal data representation for indexing. They are foundation of many other data structures, like dynamic arrays and dictionaries.
 Dynamic arrays are one dimensional arrays which can grow dynamically in size. If the dynamic array is full they there is a mechanism to copy the contents to a large array.
@@ -43,81 +44,91 @@ Space complexity worst case:  O(n)
 |Delete : O(n) |Delete : O(n)|
 
 ##### Abstract data types :
+
 1. **Singly Linked lists** : Data is stored in a object called "node" and each data object also holds a reference to its next data object. In a linked list, the first node is called the head and the last node is called the tail.They have constant insertion and deletion time. They can continue to expand.
 
-**Big O complexities** :
-Space complexity worst case:  O(n)
 
-|Average|Worst case |
-|----|----|
-|Access : O(n) |Access : O(n)|
-|Search : O(n) |Search : O(n)|
-|Insert : O(1) |Insert : O(1)|
-|Delete : O(1) |Delete : O(1)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Access : O(n) |Access : O(n)|
+   |Search : O(n) |Search : O(n)|
+   |Insert : O(1) |Insert : O(1)|
+   |Delete : O(1) |Delete : O(1)|
+
 
 2. **Stacks** : It reminds me of stack of plates in my kitchen cabinet. The one you put on top is the very first one you can access. Its LIFO :Last in first out. If you want to access you favorite plate you have to move throught each plate from top until you reach your plate. If its at the bottom then you will access all the n-1 plates until you reach your favourite plate i.e, it has O(n) search /access time. Inserts and deletes are O(1) as they are operated on top of the stack.
 Utility operations on Stacks : push() : adds an item, pop() : removes and returns the top item, peek() : returns the item on the top of the stack, without removing it and is_empty() : returns True if the stack is empty, False otherwise.
 
 
-**Big O complexities** :
-Space complexity worst case:  O(n)
-
-|Average|Worst case |
-|----|----|
-|Access : O(n) |Access : O(n)|
-|Search : O(n) |Search : O(n)|
-|Insert : O(1) |Insert : O(1)|
-|Delete : O(1) |Delete : O(1)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Access : O(n) |Access : O(n)|
+   |Search : O(n) |Search : O(n)|
+   |Insert : O(1) |Insert : O(1)|
+   |Delete : O(1) |Delete : O(1)|
+   
 
 3. **Queue** : Remember the queue in Starbucks the customer standing first in the line gets served first. Its FIFO : first in first out. Enqueue is to add elements to the end of the queue and dequeue is to remove the elements from the start of the queue. Other utility menthods are peek() :returns the item at the front of the queue, without removing it, is_empty() : returns True if the queue is empty, False otherwise.
 
 
-**Big O complexities** :
-Space complexity worst case:  O(n)
-
-|Average|Worst case |
-|----|----|
-|Access : O(n) |Access : O(n)|
-|Search : O(n) |Search : O(n)|
-|Insert : O(1) |Insert : O(1)|
-|Delete : O(1) |Delete : O(1)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Access : O(n) |Access : O(n)|
+   |Search : O(n) |Search : O(n)|
+   |Insert : O(1) |Insert : O(1)|
+   |Delete : O(1) |Delete : O(1)|
+   
 
 4. **Doubly Linked lists** : Doubly linked list has pointers to the next and the previous nodes. Doubly linked lists allow backward traversal of the list as compared to singly linked list which fails if you just had a pointer to a node in the middle of a list, then there would be no way to know what its previous node was. 
 
 
-**Big O complexities** :
-Space complexity worst case:  O(n)
-
-|Average|Worst case |
-|----|----|
-|Access : O(n) |Access : O(n)|
-|Search : O(n) |Search : O(n)|
-|Insert : O(1) |Insert : O(1)|
-|Delete : O(1) |Delete : O(1)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Access : O(n) |Access : O(n)|
+   |Search : O(n) |Search : O(n)|
+   |Insert : O(1) |Insert : O(1)|
+   |Delete : O(1) |Delete : O(1)|
+   
 
 5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an “express lane” which connects only main outer stations, and the lower layer works as a “normal lane” which connects every station. 
 
-**Big O complexities** :
-Space complexity worst case:  O(n log(n))
 
-|Average|Worst case |
-|----|----|
-|Access : O(log(n)) |Access : O(n)|
-|Search : O(log(n)) |Search : O(n)|
-|Insert : O(log(n)) |Insert : O(n)|
-|Delete : O(log(n)) |Delete : O(n)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n log(n))
+   
+   |Average|Worst case |
+   |----|----|
+   |Access : O(log(n)) |Access : O(n)|
+   |Search : O(log(n)) |Search : O(n)|
+   |Insert : O(log(n)) |Insert : O(n)|
+   |Delete : O(log(n)) |Delete : O(n)|
+   
 
 
 6. **Hash tables/ Hash Maps** :Storing the key value pair such that each value is mapped to the key (hash of the value). Data is unordered. Hash map ensures constant time for insertion and lookups. But it comes with a cost if more than one value is hashed to  the same value. This is called Hash-collision.This is accomodated by having very large hash tables. Important applications of this is in database indexing.
 
-**Big O complexities** :
-Space complexity worst case:  O(n)
 
-|Average|Worst case |
-|----|----|
-|Search : O(1) |Search : O(n)|
-|Insert : O(1) |Insert : O(n)|
-|Delete : O(1) |Delete : O(n)|
+   **Big O complexities** :
+   Space complexity worst case:  O(n)
+   
+   |Average|Worst case |
+   |----|----|
+   |Search : O(1) |Search : O(n)|
+   |Insert : O(1) |Insert : O(n)|
+   |Delete : O(1) |Delete : O(n)|
+   
 
 7. **Trees** : A tree is a widely used abstract data type (ADT) or data structure implementing this ADT that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
 
@@ -426,6 +437,7 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
 The objective is to seek the required element in the given data set.
 
 1. **Sequential search** :Sequential search involves looking at each value in turn (i.e., start with the value in array[0], then array[1], etc). The algorithm quits and returns true if the current value is v; it quits and returns false if it has looked at all of the values in the array without finding v.If the values are in sorted order, then the algorithm can sometimes quit and return false without having to look at all of the values in the array: v is not in the array if the current value is greater than v.
+
       **Big O complexities** :
    Space complexity worst case:  O(1)
    
@@ -447,6 +459,7 @@ The objective is to seek the required element in the given data set.
 
 2. **Binary search** :Can we do better than sequential search? The answer is yes.The idea is based on an algorithm which is a great example of a divide and conquer strategy.Binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.We can then repeat the process with the upper half. Start at the middle item and compare it against what we are looking for. Again, we either find it or split the list in half, therefore eliminating another large part of our possible search space. 
 
+
    |Average|Worst case |
    |----|----|
    |Search : O(log(n))|Search : O(log(n) +1)|
@@ -456,12 +469,13 @@ The objective is to seek the required element in the given data set.
 
 Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
-   **Big O complexities** :
-   Space complexity worst case:  O(n)
+      **Big O complexities** :
+      Space complexity worst case:  O(n)
+      
+      |Average|Worst case |
+      |----|----|
+      |Search : O(1) |Search : O(n)|
    
-   |Average|Worst case |
-   |----|----|
-   |Search : O(1) |Search : O(n)|
 
 4. **Breadth first search** : An algorithm that searches a tree(or graph) by searching levels of the tree first, starting from the root. 
    * If there are more than one node at the same level then it recursively searches from left to right.
