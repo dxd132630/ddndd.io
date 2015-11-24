@@ -512,13 +512,12 @@ The objective is to seek the required element in the given data set.
   Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
 
-    **Big O complexities** :
-    Space complexity worst case:  O(n)
-    
-    |Average|Worst case |
-    |----|----|
-    |Search : O(1) |Search : O(n)|
-   
+  **Big O complexities** :
+  
+  |Average|Worst case |
+  |----|----|
+  |Search : O(1) |Search : O(n)|
+
 
 
 4. **Breadth first search** : An algorithm that searches a tree(or graph) by searching levels of the tree first, starting from the root. 
