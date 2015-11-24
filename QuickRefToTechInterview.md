@@ -29,7 +29,7 @@ The data can be organized in various ways depending on the requirements like eas
 ##### Composite data structures: 
 
 1. **Arrays** : 
-An array is a low-level data structure that holds an ordered collection of elements. Each position in the array has an index, starting with 0. [ Wondering why indexing starts at 0 ?]. Optimal data representation for indexing. They are foundation of many other data structures, like dynamic arrays and dictionaries.
+An array is a low-level data structure that holds an ordered collection of elements. Each position in the array has an index, starting with 0. [ Wondering why indexing starts at 0 ?](https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF). Optimal data representation for indexing. They are foundation of many other data structures, like dynamic arrays and dictionaries.
 Dynamic arrays are one dimensional arrays which can grow dynamically in size. If the dynamic array is full they there is a mechanism to copy the contents to a large array.
 Multi-dimensional arrays have more than one indices to collectively reference the data.
 
