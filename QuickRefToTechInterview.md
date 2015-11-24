@@ -282,13 +282,15 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
 
     * **Trees**
         * **Trie** : Trie is an efficient information retrieval data structure. Using trie, search complexities can be brought to optimal limit (key length). If we store keys in binary search tree, a well balanced BST will need time proportional to M * log N, where M is maximum string length and N is number of keys in tree. Using trie, we can search the key in O(M) time. However the penalty is on trie storage requirements.Every node of trie consists of multiple branches. Each branch represents a possible character of keys. We need to mark the last node of every key as leaf node. A trie node field value will be used to distinguish the node as leaf node (there are other uses of the value field). A simple structure to represent nodes of English alphabet can be as following,
-
-```struct trie_node
-```{
-```    int value; /* Used to mark leaf nodes */
-```    trie_node_t *children[ALPHABET_SIZE];
-```};
-
+  
+  ``` java
+  struct trie_node{
+  int value; /* Used to mark leaf nodes */
+  trie_node_t *children[ALPHABET_SIZE];
+  };
+  ```
+  
+  
 Inserting a key into trie is simple approach. Every character of input key is inserted as an individual trie node. Note that the children is an array of pointers to next level trie nodes. The key character acts as an index into the array children. If the input key is new or an extension of existing key, we need to construct non-existing nodes of the key, and mark leaf node. If the input key is prefix of existing key in trie, we simply mark the last node of key as leaf. The key length determines trie depth.
 
 Searching for a key is similar to insert operation, however we only compare the characters and move down. The search can terminate due to end of string or lack of key in trie. In the former case, if the value field of last node is non-zero then the key exists in trie. In the second case, the search terminates without examining all the characters of key, since the key is not present in trie.
@@ -495,6 +497,7 @@ The objective is to seek the required element in the given data set.
    |Average : O(n/2) |Average : O(n/2) |
    |Worst : O(n) |Worst : O(n) |
 
+
 2. **Binary search** :Can we do better than sequential search? The answer is yes.The idea is based on an algorithm which is a great example of a divide and conquer strategy.Binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.We can then repeat the process with the upper half. Start at the middle item and compare it against what we are looking for. Again, we either find it or split the list in half, therefore eliminating another large part of our possible search space. 
 
   **Big O complexities** :
@@ -508,9 +511,10 @@ The objective is to seek the required element in the given data set.
 
 Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
+
   **Big O complexities** :
   Space complexity worst case:  O(n)
-
+  
   |Average|Worst case |
   |----|----|
   |Search : O(1) |Search : O(n)|
