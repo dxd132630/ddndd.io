@@ -509,16 +509,17 @@ The objective is to seek the required element in the given data set.
    
 3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot.The mapping between an item and the slot where that item belongs in the hash table is called the hash function. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. The occupancy of values in slots is defined by load factor, and is commonly denoted by λ=number of items /tablesize. Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. According to the hash function, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a “clash”).Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. 
 
-Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
+  Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
 
-  **Big O complexities** :
-  Space complexity worst case:  O(n)
-  
-  |Average|Worst case |
-  |----|----|
-  |Search : O(1) |Search : O(n)|
+    **Big O complexities** :
+    Space complexity worst case:  O(n)
+    
+    |Average|Worst case |
+    |----|----|
+    |Search : O(1) |Search : O(n)|
    
+
 
 4. **Breadth first search** : An algorithm that searches a tree(or graph) by searching levels of the tree first, starting from the root. 
    * If there are more than one node at the same level then it recursively searches from left to right.
