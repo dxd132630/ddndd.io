@@ -402,9 +402,10 @@ The objective is to seek the required element in the given data set.
    * When finished examining a level it moves to the left most node on the next level.
    * The bottom-right most node is evaluated last( the node that is deepest and is farthest right of its level)
 
-This kind of searching is optimal for a tree that is deep. The algorithm uses queue to store information about the tree while it traverses. Queues are more memory intensive, so depth first search is also memory intensive. 
+   This kind of searching is optimal for a tree that is deep. The algorithm uses queue to store information about the tree while it traverses. Queues are more memory intensive, so depth first search is also memory intensive. 
 
-Time complexity : O(|E| +|V|)
+   Time complexity : O(|E| +|V|)
+
 
 5. **Depth first search** : An algorithm that searches a tree by searching depth of the tree first, starting at the root.
    * It traverses left down a tree until it cannot go further.
@@ -412,11 +413,12 @@ Time complexity : O(|E| +|V|)
    * When finished examining a branch it moves to the node right of the root then tries to go left on all it's children until it reaches the bottom.
    * The right most node is evaluated last(the node that is ight of all it's ancestors).
 
-This kind of searching is optimal for tree that are shallow and wide. Uses stacks to push nodes onto and as Stacks are LIFO it does not need to keep track if the node pointers and is therefore less memory intensive than BFS. Once it cannot go further left it begins to evaluate the stack.
+   This kind of searching is optimal for tree that are shallow and wide. Uses stacks to push nodes onto and as Stacks are LIFO it does not need to keep track if the node pointers and is therefore less memory intensive than BFS. Once it cannot go further left it begins to evaluate the stack.
 
 Time complexity : O(|E| +|V|)
 
 Note :
+
 1. For wide, shallow trees use BFS
 2. For deep, narrow trees use DFS
 3. BFS tends to be looping algorithm
