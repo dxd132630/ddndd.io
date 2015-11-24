@@ -281,8 +281,20 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
             
 
     * **Trees**
-        * **Trie**
-        * **Radix**
+        * **Trie** : Trie is an efficient information retrieval data structure. Using trie, search complexities can be brought to optimal limit (key length). If we store keys in binary search tree, a well balanced BST will need time proportional to M * log N, where M is maximum string length and N is number of keys in tree. Using trie, we can search the key in O(M) time. However the penalty is on trie storage requirements.Every node of trie consists of multiple branches. Each branch represents a possible character of keys. We need to mark the last node of every key as leaf node. A trie node field value will be used to distinguish the node as leaf node (there are other uses of the value field). A simple structure to represent nodes of English alphabet can be as following,
+
+```struct trie_node
+```{
+```    int value; /* Used to mark leaf nodes */
+```    trie_node_t *children[ALPHABET_SIZE];
+```};
+
+Inserting a key into trie is simple approach. Every character of input key is inserted as an individual trie node. Note that the children is an array of pointers to next level trie nodes. The key character acts as an index into the array children. If the input key is new or an extension of existing key, we need to construct non-existing nodes of the key, and mark leaf node. If the input key is prefix of existing key in trie, we simply mark the last node of key as leaf. The key length determines trie depth.
+
+Searching for a key is similar to insert operation, however we only compare the characters and move down. The search can terminate due to end of string or lack of key in trie. In the former case, if the value field of last node is non-zero then the key exists in trie. In the second case, the search terminates without examining all the characters of key, since the key is not present in trie.
+
+Insert and search costs O(key_length), however the memory requirements of trie is O(ALPHABET_SIZE * key_length * N) where N is number of keys in trie. There are efficient representation of trie nodes (e.g. compressed trie, ternary search tree, etc.) to minimize memory requirements of trie.
+        * **Radix** :
 
 ### Sorting Algorithms:
 
@@ -485,10 +497,11 @@ The objective is to seek the required element in the given data set.
 
 2. **Binary search** :Can we do better than sequential search? The answer is yes.The idea is based on an algorithm which is a great example of a divide and conquer strategy.Binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.We can then repeat the process with the upper half. Start at the middle item and compare it against what we are looking for. Again, we either find it or split the list in half, therefore eliminating another large part of our possible search space. 
 
-
-   |Average|Worst case |
-   |----|----|
-   |Search : O(log(n))|Search : O(log(n) +1)|
+  **Big O complexities** :
+  
+  |Average|Worst case |
+  |----|----|
+  |Search : O(log(n))|Search : O(log(n) +1)|
    
    
 3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot.The mapping between an item and the slot where that item belongs in the hash table is called the hash function. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. The occupancy of values in slots is defined by load factor, and is commonly denoted by λ=number of items /tablesize. Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. According to the hash function, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a “clash”).Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. 
