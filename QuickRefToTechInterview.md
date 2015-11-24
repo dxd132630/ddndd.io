@@ -178,8 +178,9 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
             |Insert : O(log(n)) |Insert : O(log(n))|
             |Delete : O(log(n)) |Delete : O(log(n))|
 
-         * **B-Trees**
-    
+
+    * **B-Trees**
+         
              **Big O complexities** :
             Space complexity worst case:  O(n)
                 
@@ -200,9 +201,17 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
          * repeat until a parent is found that need not split
          * if the root splits, create a new root which has one key and two pointers.
          
-        * **B\* Trees** : 
-        * **2-3 trees**
-        * **2-3-4 trees**
+        * **B\* Trees** :  A B-tree in which nodes are kept 2/3 full by redistributing keys to fill two child nodes, then splitting them into three nodes. 
+        
+        * **2-3 trees** :A tree which has every node with children (internal node) that either has two children (2-node) and one data element or three children (3-nodes) and two data elements.
+        
+        * **2-3-4 trees** :The 2, 3, and 4 in the name refer to how many links to child nodes can potentially be contained in a given node. 
+          * For non-leaf nodes, three arrangements are possible:
+            * A node with only one data item always has two children
+            * A node with two data items always has three children
+            * A node with three data items always has four children.
+          * For non-leaf nodes with at least one data item ( a node will not exist with zero data items), the number of links may be 2, 3, or 4.
+          
     * **Heaps** : 
         * **Binary heaps** : A binary heap is a complete binary tree which satisfies the heap ordering property. The ordering can be one of two types:
          * the min-heap property: the value of each node is greater than or equal to the value of its parent, with the minimum-value element at the root.
@@ -210,6 +219,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
          * In a heap the highest (or lowest) priority element is always stored at the root, hence the name "heap". A heap is not a sorted structure and can be regarded as partially ordered. As you see from the picture, there is no particular relationship among nodes on any given level, even among the siblings.
          * Since a heap is a complete binary tree, it has a smallest possible height - a heap with N nodes always has O(log N) height.
          * A heap is useful data structure when you need to remove the object with the highest (or lowest) priority. A common use of a heap is to implement a priority queue.
+
 
              **Big O complexities** :
                 
@@ -240,6 +250,8 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
                ・It contains the binomial tree Bi iff bi = 1, where bk⋅ b2 b1 b0 is binary representation of n.
                ・It has ≤ ⎣log2 n⎦ + 1 binomial trees.
                ・Its height ≤ ⎣log2 n⎦.
+               
+               
              **Big O complexities** :
             
             |Average |
@@ -348,6 +360,7 @@ Following are some of the important characteristics of Insertion Sort.
       * It requires equal amount of additional space as the unsorted list. Hence its not at all recommended for searching large unsorted lists.
       * It is the best Sorting technique for sorting Linked Lists.
 
+
    **Big O complexities** :
    Space complexity worst case:  O(n)
    
@@ -357,12 +370,14 @@ Following are some of the important characteristics of Insertion Sort.
    |Average : O(nlog(n)) |
    |Worst : O(nlog(n)) |
 
+
 6. **Quick sort** : Quicksort is popular because it is not difficult to implement, works well for a variety of different kinds of input data, and is substantially faster than any other sorting method in typical applications. It is in-place (uses only a small auxiliary stack), requires time proportional to N log N on the average to sort N items, and has an extremely short inner loop. Quicksort is a divide-and-conquer method for sorting. It works by partitioning an array into two parts, then sorting the parts independently.
 The crux of the method is the partitioning process, which rearranges the array to make the following three conditions hold:
    * The entry a[j] is in its final place in the array, for some j.
    * No entry in a[lo] through a[j-1] is greater than a[j].
    * No entry in a[j+1] through a[hi] is less than a[j].
 This j point is called pviot point at which the partition takes place. We achieve a complete sort by partitioning, then recursively applying the method to the subarrays. It is a randomized algorithm, because it randomly shuffles the array before sorting it.
+
 
    **Big O complexities** :
    Space complexity worst case:  O(nlog(n))
@@ -373,10 +388,12 @@ This j point is called pviot point at which the partition takes place. We achiev
    |Average : O(nlog(n)) |
    |Worst : O(n^2) |
 
+
 7. **Heap sort** :The heap sort combines the best of both merge sort and insertion sort. Like merge sort, the worst case time of heap sort is O(n log n) and like insertion sort, heap sort sorts in-place. The heap sort algorithm starts by using procedure BUILD-HEAP to build a heap on the input array A[1 . . n]. Since the maximum element of the array stored at the root A[1], it can be put into its correct final position by exchanging it with A[n] (the last element in A). If we now discard node n from the heap than the remaining elements can be made into heap. Note that the new element at the root may violate the heap property. All that is needed to restore the heap property.The HEAPSORT procedure takes time O(n lg n), since the call to BUILD_HEAP takes time O(n) and each of the n -1 calls to Heapify takes time O(lg n).
 
       * Heap sort is not a Stable sort, and requires a constant space for sorting a list.
       * Heap Sort is very fast and is widely used for sorting.
+
 
    **Big O complexities** :
    Space complexity worst case:  O(1)
@@ -386,6 +403,7 @@ This j point is called pviot point at which the partition takes place. We achiev
    |Best : O(nlog(n)) |
    |Average : O(nlog(n)) |
    |Worst : O(nlog(n)) |
+
 
 #### Integer sorting :  
 
@@ -398,6 +416,8 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
       * Scatter: Go over the original array, putting each object in its bucket.
       * Sort each non-empty bucket.
       * Gather: Visit the buckets in order and put all elements back into the original array
+      
+
     **Big O complexities** :
    Space complexity worst case:  O(n)
    
@@ -406,9 +426,12 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
    |Best : O(n+k) |
    |Average : O(n+k) |
    |Worst : O(n^2) |
+  
 
 2. **Count sort** : It works by counting the number of objects that have each distinct key value, and using arithmetic on those counts to determine the positions of each key value in the output sequence. Its running time is linear in the number of items and the difference between the maximum and minimum key values, so it is only suitable for direct use in situations where the variation in keys is not significantly greater than the number of items. However, it is often used as a subroutine in another sorting algorithm, radix sort, that can handle larger keys more efficiently
     When elements are in range from 1 to k.
+
+
    **Big O complexities** :
    Space complexity worst case:  O(n+k)
    
@@ -418,9 +441,11 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
    |Average : O(n+k) |
    |Worst : O(n^2) |
 
+
 3. **Radix sort** :The idea of Radix Sort is to do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.
    Do following for each digit i where i varies from least significant digit to the most significant digit.
       Repeat : Sort input array using counting sort (or any stable sort) according to the i’th digit.
+
 
    **Big O complexities** :
    Space complexity worst case:  O(n+k)
@@ -437,6 +462,7 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
 The objective is to seek the required element in the given data set.
 
 1. **Sequential search** :Sequential search involves looking at each value in turn (i.e., start with the value in array[0], then array[1], etc). The algorithm quits and returns true if the current value is v; it quits and returns false if it has looked at all of the values in the array without finding v.If the values are in sorted order, then the algorithm can sometimes quit and return false without having to look at all of the values in the array: v is not in the array if the current value is greater than v.
+
 
       **Big O complexities** :
    Space complexity worst case:  O(1)
@@ -469,12 +495,12 @@ The objective is to seek the required element in the given data set.
 
 Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
-      **Big O complexities** :
-      Space complexity worst case:  O(n)
-      
-      |Average|Worst case |
-      |----|----|
-      |Search : O(1) |Search : O(n)|
+  **Big O complexities** :
+  Space complexity worst case:  O(n)
+
+  |Average|Worst case |
+  |----|----|
+  |Search : O(1) |Search : O(n)|
    
 
 4. **Breadth first search** : An algorithm that searches a tree(or graph) by searching levels of the tree first, starting from the root. 
