@@ -16,7 +16,6 @@ In computational theory asymptote is used to represent the limiting behavior to 
 ### Data structures :
 
 <quote wiki> A data structure is a particular way to organize data in computer so  that it can be used efficiently.  < /quote wiki>
-The data can be organized in various ways depending on the requirements like ease of access, optimized storage and efficient retrieval. Predominantly it can be categorized as follows :
 
 ##### Basic operations on data :
 - **Insertion**:Insertion means addition of a new data element in a data structure.
@@ -26,6 +25,7 @@ The data can be organized in various ways depending on the requirements like eas
 - **Sorting**:Arranging data elements of a data structure in a specified order is called sorting.
 - **Merging**:Combining elements of two similar data structures to form a new data structure of the same type, is called merging.
 
+The data can be organized in various ways depending on the requirements like ease of access, optimized storage and efficient retrieval. Data structures can be predominantly categorized as follows :
 ##### Composite data structures: 
 
 1. **Arrays** : 
