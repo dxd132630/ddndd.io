@@ -59,7 +59,7 @@ Space complexity worst case:  O(n)
    |Delete : O(1) |Delete : O(1)|
 
 
-2. **Stacks** : It reminds me of stack of plates in my kitchen cabinet. The one you put on top is the very first one you can access. Its LIFO :Last in first out. If you want to access you favorite plate you have to move throught each plate from top until you reach your plate. If its at the bottom then you will access all the n-1 plates until you reach your favourite plate i.e, it has O(n) search /access time. Inserts and deletes are O(1) as they are operated on top of the stack.
+2. **Stacks** : It reminds me of stack of plates in my kitchen cabinet. The one you put on top is the very first one you can access. Its LIFO :Last in first out. If you want to access you favorite plate you have to move through each plate from top until you reach your plate. If its at the bottom then you will access all the n-1 plates until you reach your favorite plate i.e, it has O(n) search /access time. Inserts and deletes are O(1) as they are operated on top of the stack.
 Utility operations on Stacks : push() : adds an item, pop() : removes and returns the top item, peek() : returns the item on the top of the stack, without removing it and is_empty() : returns True if the stack is empty, False otherwise.
 
 
@@ -74,7 +74,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
    |Delete : O(1) |Delete : O(1)|
    
 
-3. **Queue** : Remember the queue in Starbucks the customer standing first in the line gets served first. Its FIFO : first in first out. Enqueue is to add elements to the end of the queue and dequeue is to remove the elements from the start of the queue. Other utility menthods are peek() :returns the item at the front of the queue, without removing it, is_empty() : returns True if the queue is empty, False otherwise.
+3. **Queue** : Remember the queue in Star bucks the customer standing first in the line gets served first. Its FIFO : first in first out. Enqueue is to add elements to the end of the queue and dequeue is to remove the elements from the start of the queue. Other utility methods are peek() :returns the item at the front of the queue, without removing it, is_empty() : returns True if the queue is empty, False otherwise.
 
 
    **Big O complexities** :
@@ -117,7 +117,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
    
 
 
-6. **Hash tables/ Hash Maps** :Storing the key value pair such that each value is mapped to the key (hash of the value). Data is unordered. Hash map ensures constant time for insertion and lookups. But it comes with a cost if more than one value is hashed to  the same value. This is called Hash-collision.This is accomodated by having very large hash tables. Important applications of this is in database indexing.
+6. **Hash tables/ Hash Maps** :Storing the key value pair such that each value is mapped to the key (hash of the value). Data is unordered. Hash map ensures constant time for insertion and lookups. But it comes with a cost if more than one value is hashed to  the same value. This is called Hash-collision.This is accommodated by having very large hash tables. Important applications of this is in database indexing.
 
 
    **Big O complexities** :
@@ -295,7 +295,7 @@ There are two kinds of sorting of numbers :
 
 #### Comparison sorting :
 
-The idea used for sorting the numbers here is by having a comparision of the order of these numbers in the sequence and reassigning the numbers to the correct order based on this comparison. This generally has a lower bound of Sigma(nlogn). Although some sorting algorithms have O(n) only when they are sorted. In worst case the lower bound is nLogn.
+The idea used for sorting the numbers here is by having a comparison of the order of these numbers in the sequence and reassigning the numbers to the correct order based on this comparison. This generally has a lower bound of Sigma(nlogn). Although some sorting algorithms have O(n) only when they are sorted. In worst case the lower bound is nLogn.
 
 
 1. **Selection sort** :The algorithm works by selecting the smallest unsorted item and then swapping it with the item in the next position to be filled.
@@ -317,7 +317,7 @@ Following are some of the important characteristics of Insertion Sort.
       * It is efficient for smaller data sets, but very inefficient for larger lists.
       * Insertion Sort is adaptive, that means it reduces its total number of steps if given a partially sorted list, hence it increases its efficiency.
       * It is better than Selection Sort and Bubble Sort algorithms.
-      * Its space complexity is less, like Bubble Sorting, inerstion sort also requires a single additional memory space.
+      * Its space complexity is less, like Bubble Sorting, insertion sort also requires a single additional memory space.
       * It is Stable, as it does not change the relative order of elements with equal keys
 
 
@@ -376,7 +376,7 @@ The crux of the method is the partitioning process, which rearranges the array t
    * The entry a[j] is in its final place in the array, for some j.
    * No entry in a[lo] through a[j-1] is greater than a[j].
    * No entry in a[j+1] through a[hi] is less than a[j].
-This j point is called pviot point at which the partition takes place. We achieve a complete sort by partitioning, then recursively applying the method to the subarrays. It is a randomized algorithm, because it randomly shuffles the array before sorting it.
+This j point is called pivot point at which the partition takes place. We achieve a complete sort by partitioning, then recursively applying the method to the subarrays. It is a randomized algorithm, because it randomly shuffles the array before sorting it.
 
 
    **Big O complexities** :
@@ -529,5 +529,4 @@ Note :
 1. For wide, shallow trees use BFS
 2. For deep, narrow trees use DFS
 3. BFS tends to be looping algorithm
-4. DFS tends to be recursive alrorithm
-
+4. DFS tends to be recursive algorithm
