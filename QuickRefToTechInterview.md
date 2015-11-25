@@ -11,7 +11,7 @@ Generally the time complexities of the algorithms are expressed with following n
 
 ### Asymptotic analysis :
 
-In computational theory asymptote is used to represent the limiting behavior to describe the computational complexity of problems, generally in Big O notation. For rest of the discussion we will be using Big O notation to represent theoritical time and space complexities.
+In computational theory asymptote is used to represent the limiting behavior to describe the computational complexity of problems, generally in Big O notation. For rest of the discussion we will be using Big O notation to represent theoretical time and space complexities.
 
 ### Data structures :
 
@@ -102,7 +102,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
    |Delete : O(1) |Delete : O(1)|
    
 
-5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an “express lane” which connects only main outer stations, and the lower layer works as a “normal lane” which connects every station. 
+5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an express lane which connects only main outer stations, and the lower layer works as a normal lane which connects every station. 
 
 
    **Big O complexities** :
@@ -235,21 +235,21 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
 
         * **Binomial heaps** :  A binomial tree of order k is defined recursively:
             * Order 0: single node.
-            * Order k: one binomial tree of order k – 1 linked to another of order k – 1.
+            * Order k: one binomial tree of order k  1 linked to another of order k  1.
             * Given an order k binomial tree Bk,
-               ・Its height is k.
-               ・It has 2k nodes.
-               ・It has nodes at depth i.
-               ・The degree of its root is k.
-               ・Deleting its root yields k binomial trees Bk–1, …, B0
+               &#12539;Its height is k.
+               &#12539;It has 2k nodes.
+               &#12539;It has nodes at depth i.
+               &#12539;The degree of its root is k.
+               &#12539;Deleting its root yields k binomial trees Bk1, , B0
             * A binomial heap is a sequence of binomial trees such that:
-               ・Each tree is heap-ordered.
-               ・There is either 0 or 1 binomial tree of order k.
+               &#12539;Each tree is heap-ordered.
+               &#12539;There is either 0 or 1 binomial tree of order k.
             * Given a binomial heap with n nodes:
-               ・The node containing the min element is a root of B0, B1, …, or Bk.
-               ・It contains the binomial tree Bi iff bi = 1, where bk⋅ b2 b1 b0 is binary representation of n.
-               ・It has ≤ ⎣log2 n⎦ + 1 binomial trees.
-               ・Its height ≤ ⎣log2 n⎦.
+               &#12539;The node containing the min element is a root of B0, B1, , or Bk.
+               &#12539;It contains the binomial tree Bi iff bi = 1, where bk&#8901; b2 b1 b0 is binary representation of n.
+               &#12539;It has &#8804; &#9123;log2 n&#9126; + 1 binomial trees.
+               &#12539;Its height &#8804; &#9123;log2 n&#9126;.
                
                
              **Big O complexities** :
@@ -265,7 +265,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
             |Merge : O(log(n))|
             
             
-        * **Fibonacci heaps** :Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heap’s properties comes in.Each tree has an order just like the binomial heap that is based on the number of children. Nodes within a Fibonacci heap can be removed from their tree without restructuring them, so the order does not necessarily indicate the maximum height of the tree or number of nodes it contains.
+        * **Fibonacci heaps** :Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heaps properties comes in.Each tree has an order just like the binomial heap that is based on the number of children. Nodes within a Fibonacci heap can be removed from their tree without restructuring them, so the order does not necessarily indicate the maximum height of the tree or number of nodes it contains.
 
              **Big O complexities** :
             
@@ -460,7 +460,7 @@ It is the algorithmic problem of sorting a collection of data values by numeric 
 
 3. **Radix sort** :The idea of Radix Sort is to do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.
    Do following for each digit i where i varies from least significant digit to the most significant digit.
-      Repeat : Sort input array using counting sort (or any stable sort) according to the i’th digit.
+      Repeat : Sort input array using counting sort (or any stable sort) according to the ith digit.
 
 
    **Big O complexities** :
@@ -509,7 +509,7 @@ The objective is to seek the required element in the given data set.
   |Search : O(log(n))|Search : O(log(n) +1)|
    
    
-3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot.The mapping between an item and the slot where that item belongs in the hash table is called the hash function. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. The occupancy of values in slots is defined by load factor, and is commonly denoted by λ=number of items /tablesize. Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. According to the hash function, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a “clash”).Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. 
+3. **Hashing** :Search algorithms that use hashing consist of two separate parts. The first step is to compute a hash function that transforms the search key into an array index. Ideally, different keys would map to different indices. This ideal is generally beyond our reach, so we have to face the possibility that two or more different keys may hash to the same array index. Thus, the second part of a hashing search is a collision-resolution process that deals with this situation.A hash table is a collection of items which are stored in such a way as to make it easy to find them later. Each position of the hash table, often called a slot.The mapping between an item and the slot where that item belongs in the hash table is called the hash function. The hash function will take any item in the collection and return an integer in the range of slot names, between 0 and m-1. The occupancy of values in slots is defined by load factor, and is commonly denoted by &#955;=number of items /tablesize. Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. According to the hash function, two or more items would need to be in the same slot. This is referred to as a collision (it may also be called a clash).Unfortunately, given an arbitrary collection of items, there is no systematic way to construct a perfect hash function. 
 
   Something interesting : Cuckoo hashing. Maximum load with uniform hashing is log n / log log n. Improve to log log n by choosing least loaded of two. (Only improves to log log n / log d if choose least loaded of d.) cuckoo hashing achieves constant average time insertion and constant worst-case search: each item has two possible slots. Put in either of two available slots if empty; if not, eject another item in one of the two slots and move to its other slot (and recur). "The name derives from the behavior of some species of cuckoo, where the mother bird pushes eggs out of another bird's nest to lay her own." Rehash everything if you get into a relocation cycle.
 
@@ -551,4 +551,4 @@ Note :
 4. DFS tends to be recursive algorithm
 
 
-###### Hope this document + your hardword + lil bit of pixi dust lands you in your dream job. Happy coding :) 
+###### Hope this document + your hardwork + lil bit of pixi dust lands you in your dream job. Happy coding :) 
