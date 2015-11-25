@@ -102,7 +102,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
    |Delete : O(1) |Delete : O(1)|
    
 
-5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an express lane which connects only main outer stations, and the lower layer works as a normal lane which connects every station. 
+5. **Skip lists** : A skip list is a data structure that allows fast search within an ordered sequence of elements. Fast search is made possible by maintaining a linked hierarchy of subsequences, each skipping over fewer elements. The idea is simple, we create multiple layers so that we can skip some nodes for faster access.The upper layer works as an express lane which connects only main outer stations, and the lower layer works as a normal lane which connects every station. 
 
 
    **Big O complexities** :
@@ -265,7 +265,7 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
             |Merge : O(log(n))|
             
             
-        * **Fibonacci heaps** :Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heaps properties comes in.Each tree has an order just like the binomial heap that is based on the number of children. Nodes within a Fibonacci heap can be removed from their tree without restructuring them, so the order does not necessarily indicate the maximum height of the tree or number of nodes it contains.
+        * **Fibonacci heaps** :Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heaps properties comes in.Each tree has an order just like the binomial heap that is based on the number of children. Nodes within a Fibonacci heap can be removed from their tree without restructuring them, so the order does not necessarily indicate the maximum height of the tree or number of nodes it contains.
 
              **Big O complexities** :
             
