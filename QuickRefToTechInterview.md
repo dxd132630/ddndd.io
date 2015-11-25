@@ -326,7 +326,7 @@ The selection sort works as follows: you look through the entire array for the s
    |Average : O(n^2) |
    |Worst : O(n^2) |
 
-2. **Insertion sort** : The algorithm that people often use to sort bridge hands is to consider the cards one at a time, inserting each into its proper place among those already considered (keeping them sorted). In a computer implementation, we need to make space for the current item by moving larger items one position to the right, before inserting the current item into the vacated position.
+2. **Insertion sort** : Inserting each element into its proper place among those already considered (keeping them sorted). We need to make space for the current item by moving larger items one position to the right, before inserting the current item into the vacated position.
 Following are some of the important characteristics of Insertion Sort.
 
       * It has one of the simplest implementation
