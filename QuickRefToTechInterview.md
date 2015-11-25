@@ -549,3 +549,6 @@ Note :
 2. For deep, narrow trees use DFS
 3. BFS tends to be looping algorithm
 4. DFS tends to be recursive algorithm
+
+
+###### Hope this document + your hardword + lil bit of pixi dust lands you in your dream job. Happy coding :) 
