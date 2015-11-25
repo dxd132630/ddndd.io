@@ -235,21 +235,21 @@ Utility operations on Stacks : push() : adds an item, pop() : removes and return
 
         * **Binomial heaps** :  A binomial tree of order k is defined recursively:
             * Order 0: single node.
-            * Order k: one binomial tree of order k  1 linked to another of order k  1.
+            * Order k: one binomial tree of order k-1 linked to another of order k-1.
             * Given an order k binomial tree Bk,
-               &#12539;Its height is k.
-               &#12539;It has 2k nodes.
-               &#12539;It has nodes at depth i.
-               &#12539;The degree of its root is k.
-               &#12539;Deleting its root yields k binomial trees Bk1, , B0
+               * Its height is k.
+               * It has 2^k nodes.
+               * It has nCi nodes at depth i
+               * The degree of its root is k.
+               * Deleting its root yields k binomial trees Bk-1,.., B0
             * A binomial heap is a sequence of binomial trees such that:
-               &#12539;Each tree is heap-ordered.
-               &#12539;There is either 0 or 1 binomial tree of order k.
+               * Each tree is heap-ordered.
+               * There is either 0 or 1 binomial tree of order k.
             * Given a binomial heap with n nodes:
-               &#12539;The node containing the min element is a root of B0, B1, , or Bk.
-               &#12539;It contains the binomial tree Bi iff bi = 1, where bk&#8901; b2 b1 b0 is binary representation of n.
-               &#12539;It has &#8804; &#9123;log2 n&#9126; + 1 binomial trees.
-               &#12539;Its height &#8804; &#9123;log2 n&#9126;.
+               * The node containing the min element is a root of B0, B1, …, or Bk. 
+               * It contains the binomial tree Bi  iff bi  = 1, where bk⋅ b2 b1 b0 is binary representation of n
+               * It has  ≤ ⎣log2 n⎦ + 1 binomial trees.
+               * Its height  ≤ ⎣log2 n⎦.
                
                
              **Big O complexities** :
